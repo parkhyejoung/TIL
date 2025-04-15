@@ -1,0 +1,16 @@
+#weather {background-color: #000;}
+#weather h1 {color:#2502b0f5;}
+#weather .area {color:#fff;}
+#weather .temperature {color:#fff;}
+#weather .sub_title {color:#fff;}
+#weather .humidity {color:#fff;}
+#weather .sub_title {color:#fff;}
+#weather .dust {color:#fff;}
+#weather .result {color:#fff;}
+#news {background-color: #333;}
+#news a {color: rgb(17, 61, 221);}
+#news .box {color: rgb(245,245,220);}
+#news .box h2 {color: rgb(245,245,220);}
+#news .box p {color: rgb(245,245,220);}
+#news p{color: rgb(245,245,220);}
+#news span{color:#ed0202;}
