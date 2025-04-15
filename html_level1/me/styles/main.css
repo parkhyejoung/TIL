@@ -1,9 +1,55 @@
-#mobile_wrap {background-color:#E9BB72;}
-#mobile_wrap .photo {}
-#mobile_wrap .photo img {}
-#mobile_wrap h1 {}
-#mobile_wrap h1 span {}
-#mobile_wrap h2 {}
-#mobile_wrap .git {}
-#mobile_wrap .skill {}
-#mobile_wrap .skill li{}
+#mobile_wrap {/* 공통으로 넣을거 같이하면조음 */
+    background-color:#E9BB72;
+    width: 440px;
+    height: 956px;
+    text-align:center;/* 자식 자손 정렬 */
+    font-family: 'Pretendard',sans-serif;/* 자식 자손 글꼴 통일 */
+}
+#mobile_wrap .photo{
+    margin-top: 146px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#mobile_wrap .photo img {
+}
+#mobile_wrap h1 {/* 글꼴부모상속 */
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02rem;
+    line-height: 1;
+    margin-bottom: 31px;
+}
+#mobile_wrap h1 span {/* 글꼴부모상속 */
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+    line-height: 1;
+}
+#mobile_wrap h2 {/* 글꼴부모상속 */
+    line-height: 1;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-top: 31px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 168px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mobile_wrap .git {/* 글꼴부모상속 */
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+    line-height: 1;
+}
+#mobile_wrap .skill{}
+#mobile_wrap .skill li{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
