@@ -1,0 +1,43 @@
+#wrap {
+    background-color: #E8E8E8;
+    width:440px;
+    height: 956px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#wrap h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing:-0.02em;
+    color: #1C3643;
+    padding-top: 128px;
+}
+#wrap > p {} /* #wrap의 모든 자식 p */
+#wrap h1+p {
+    background-color: yellow;
+    margin-top: 30px;
+    font-size: 1rem;
+    letter-spacing:-0.02em;
+} /* #wrap의 h1 옆에 p */
+#wrap #login_frm {background-color: burlywood;
+    padding-top: 298px;
+    padding-bottom: 248px;
+}
+#wrap #login_frm h2 {
+    font-size:1.375rem;
+    letter-spacing:-0.02em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#wrap #login_frm p {
+    border:1px solid #000;
+    border-radius:10px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+}
+#wrap #login_frm p input {}
+#wrap #login_frm p #login_btn {}
+#wrap #login_frm p .login_google {}
+#wrap #login_frm+p {background-color: blue;}
+#wrap #login_frm+p a {background-color: aquamarine;}
