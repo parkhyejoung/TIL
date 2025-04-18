@@ -2,10 +2,9 @@
     background-color: #E8E8E8;
     width:440px;
     height: 956px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
 }
-#wrap h1 {   
+#wrap h1 { 
     padding-top: 128px;
     margin-bottom: 30px;
     font-weight: 700;/* bold */
@@ -32,19 +31,21 @@
 }
 #wrap #login_frm p input {
     width: 410px;
-    padding-left: 20px;
+    padding: 15px 20px;
+/*  padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
     border: 1px solid #000;
     border-radius: 10px;
 }
 #wrap #login_frm p #login_btn {
     width: 410px;
-    padding-left: 20px;
+/*  padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
+    padding: 15px 20px;
     border-radius: 10px;
     border: 1px solid #000;
     background-color: #3B6978;
@@ -55,10 +56,11 @@
     margin-top: 21px;
     background-color: #fff;
     width: 410px;
-    padding-left: 20px;
+/*  padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
+    padding:15px 20px;
     border-radius: 10px;
     border: 1px solid #000;
     display: block;
@@ -74,4 +76,4 @@
 }
 #wrap #login_frm+p a {
     font-weight: 600; 
-    }
+}
