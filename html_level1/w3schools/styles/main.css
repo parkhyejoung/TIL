@@ -5,41 +5,73 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-#wrap h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing:-0.02em;
-    color: #1C3643;
+#wrap h1 {   
     padding-top: 128px;
+    margin-bottom: 30px;
+    font-weight: 700;/* bold */
+    font-size: 2.5rem;/* 40px */
+    color: #1C3643;
+    /* 위치 레이아웃 먼저 잡는게 편함 */
 }
-#wrap > p {} /* #wrap의 모든 자식 p */
+#wrap > p {} /* #wrap의 모든 자식 p Welcome back! Please,Don’t have on*/
 #wrap h1+p { 
-    margin-top: 30px;
-    font-size: 1rem;
-    letter-spacing:-0.02em;
+    margin-bottom: 84px;
 } /* #wrap의 h1 옆에 p */
 #wrap #login_frm {}
 #wrap #login_frm h2 {
     font-size:1.375rem;
-    letter-spacing:-0.02em;
     font-weight: 600;
-    margin-bottom: 20px;}
-#wrap #login_frm p {
-    border:1px solid #000;
-    border-radius:10px;
-    color: #fff;
-    height: 40px;
-    line-height :40px;
+    margin-bottom: 21px;
+}
+#wrap #login_frm p {}
+#wrap #login_frm p.user_in {margin-bottom: 42px;}
+#wrap #login_frm p.user_btn {margin-bottom: 21px;}
+#wrap #login_frm p input::placeholder { /* placeholder 속성 선택자 작성법 */
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 #wrap #login_frm p input {
+    width: 410px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
 }
-#wrap #login_frm p #login_btn {background-color: #3B6978;
+#wrap #login_frm p #login_btn {
+    width: 410px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #3B6978;
+    color: #fff;
+    font-weight: 600; font-size: 0.875rem;
 }
 #wrap #login_frm p .login_google {
+    margin-top: 21px;
     background-color: #fff;
+    width: 410px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: block;
+    text-align: center;
+    font-weight: 600;
 }
-#wrap #login_frm+p {}
-#wrap #login_frm+p a {
+#wrap #login_frm+p {
     color: black;
-    font-weight: 700; 
+    font-weight: 300; 
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 99px;
+}
+#wrap #login_frm+p a {
+    font-weight: 600; 
     }
