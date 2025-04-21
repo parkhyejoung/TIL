@@ -1,0 +1,30 @@
+/* bg.css */
+.bg {
+    width: 1000px; height: 1000px;
+    background-repeat:no-repeat;
+}
+.bg1 {
+    background:yellow url(https://i.pinimg.com/736x/74/61/fd/7461fddbf222466359b459f1dd67aa9e.jpg) center no-repeat;
+/*     background-color: yellow;
+    background-image:url(https://i.pinimg.com/736x/74/61/fd/7461fddbf222466359b459f1dd67aa9e.jpg);
+    background-color: aqua;
+    background-position: 0 50%;
+    background-size: cover; */
+}
+.bg2 {/* background-color: aquamarine;
+    background-image:url(../images/test2.jpg);
+    background-position: 0 30%; /* 밑으로 갈수록 100 위로 갈수록 0 */
+/*     background-size: 500px auto; */  
+/*     background-size: 100% auto;
+    background-size: cover; */ /* */ 
+    background: #000 url(https://i.pinimg.com/736x/b9/60/46/b96046fefdd3f900f55fc34eee46fb7e.jpg) no-repeat scroll center 100% / cover;
+}
+.bg3 {  
+/*     height:3000px;
+    background-color: blueviolet;
+    background-image:url(https://i.pinimg.com/736x/63/17/4c/63174cc9233e011c8225ddaaf5ebce10.jpg);
+    background-size: cover ;
+    background-size: 50% auto;
+    background-attachment: scroll; */
+    background: pink url(https://i.pinimg.com/736x/11/e4/70/11e470b61e618b872b187226fd565832.jpg) no-repeat scroll center 100% / cover;
+}
