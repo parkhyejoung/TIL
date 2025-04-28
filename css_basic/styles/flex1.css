@@ -1,0 +1,18 @@
+.wrap1 {
+    background-color: lightgray;
+    display: flex;/* 가변률 있어서 화면비율에 따라 퍼센트 자동계산해서 변함  */
+    /* flex-direction: row; *//* 보통  column(수직) , row(수평) 많이 사용
+    container 작성하는 메인축 정렬방법*/
+    /* flex-wrap: wrap-reverse; *//* container의 item 줄바꿈처리 */
+    /*주로 wrap과 nowrap 많이 사용  */
+    flex-flow: column wrap;/* 방향과 줄바꿈 한번에 작성하는 속성 */
+    justify-content: center;
+    /* 양쪽 끝 불일지 말지로 between(붙) or around(떨) 결정함 
+    메인축 기준으로 정렬되는 거라 메인축 ->수직(수직정렬) 수평(수평정렬)*/
+    height: 600px;/* 여유공간이 있어야 확인하능함! */
+}
+.wrap1 li {
+    width: 100px; height: 100px; font-size: 3rem;
+}
+.wrap1 li:nth-child(odd) {background-color: aqua;}
+.wrap1 li:nth-child(even) {background-color: yellow;}
