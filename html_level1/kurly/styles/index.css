@@ -1,73 +1,148 @@
 /* index.css */
 main {
-    width: 1000px;
-    background-color: #eee;
-    margin: 0 auto;/* 위는 여백 필요 xx 양옆은 가운데정렬인데 화면 크기에 맞춰 자동가운데(무조건 블럭일경우에만 가능한방법)
-    (인라인일 경우에는 tetx-ailen 무조건 밑에 인라인에 들어가므로 부모에게 적용필요) */
+    width:1000px;
+    background-color:#eee;
+    margin:0 auto;
 }
 main h1 {}
 main h1 a {}
 main h1 a img {}
 /* =========================가입약관 */
 main .law {
-    background-color: #fff;
-    width:90%; height: 150px; /* 보이는 영역 크기 */
-    margin: 30px auto; padding: 16px;
-    overflow: auto;
+    background-color:#fff;
+    width:90%; height:180px;/* 보이는 영역 크기 */
+    margin:30px auto; padding:16px;
+    overflow:auto;
     /* 부모 크기보다 자식이 클 경우 auto자동으로 스크롤을 보이고 부모 크기보다 자식이 작거나 같다면 auto자동으로 스크롤을 숨기는 속성값 */
 }
-main .law h2 {margin: 0 0 30px;}
-main .law h3 {margin: 0 0 15px;}
-main .law p {line-height: 1.5; margin: 20px 0;}
+main .law h2 {margin:0 0 30px;}
+main .law h3 {margin:0 0 15px;}
+main .law p {line-height:1.5; margin:20px 0;}
 /* =========================가입정보입력 */
 main #login_frm {}
 main #login_frm .member_info {
-    overflow: hidden; /* 최소한의 높이값*/
+    /* width:1000px; */
+    overflow:hidden;
 }
 main #login_frm .member_info dt {
-    width: 200px; background-color: lime;
-    float:left;
-    clear:both; /* 행의시작 */
+    width:200px; 
+    float:left; clear:both;
 }
 main #login_frm .member_info dd {
+    float:left;
 }
-/* 사용자 입력, 선택 양식을 담은 두번째 dd 선택자(왼쪽) */ 
+/* 사용자 입력, 선택 양식을 담은 두번째 dd 선택자 */
 /* main #login_frm .member_info dd:nth-of-type(odd) {background-color:yellow;} */
 main #login_frm .member_info dd:nth-of-type(2n+1) {
-    width: 650px;
-    background-color:yellow;
-    float:left;
+    width:650px;
 }
  /* 중복확인, 인증번호받기를 담은 세번째 dd 선택자 */
 /* main #login_frm .member_info dd:nth-of-type(even) {background-color:skyblue;} */
 main #login_frm .member_info dd:nth-of-type(2n) {
-    background-color:skyblue;
-    width: 150px;
-    float:left;
+    width:150px;
 }
 /* =========================나머지 자식, 자손 개별 선택자 */
 main #login_frm .member_info dt em {}
 /* =========================id,pw,name,email,phone 묶음속성 */
 main #login_frm .member_info dd input[name^=user] {
     background-color:#fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 90%; padding: 12px;}
+    border:1px solid #ccc;
+    border-radius:4px;
+    width:90%; padding:12px;
+}
 /* =========================개별속성(id) */
 main #login_frm .member_info dd input[name$=id] {}
 /* =========================오른쪽 중복확인,인증번호 버튼 묶음 선택자 */
-main #login_frm .member_info dd:nth-of-type(2n) .btn {background-color:red;}
+main #login_frm .member_info dd:nth-of-type(2n) {
+    text-align:right;
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn {
+    background-color:#5f0080; color:#fff;
+    width:90%; height:45px; border-radius:5px;
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn:hover {
+    filter:brightness(110%);
+}
 /* =========================휴대폰, 주소, 성별, 생년월일 선택자 */
-main #login_frm .member_info dd select[name^=news] {}
+main #login_frm .member_info dd select[name^=news] {
+    width:60px; border:1px solid #ccc; border-radius:4px;
+    padding:4px; font-size:0.875rem; height:50px;
+    float:left; 
+    margin-right:5px;
+    background:#fff url(../images/ico_down_16x10.png) no-repeat 92% center / 8px;
+}
 main #login_frm .member_info dd select[name^=news] option {}
-main #login_frm .member_info dd input[name*=phone] {}
+main #login_frm .member_info dd input[name*=phone] {
+    float:left;
+    width:calc(90% - 65px);
+}
 /* =========================인증번호 버튼 개별 선택자 */
-main #login_frm .member_info dd #authentication_btn {background-color:coral;}
-main #login_frm .member_info dd #address_search_btn {}
-main #login_frm .member_info dd #address_search_btn + span {}
-main #login_frm .member_info dd input[name=gender] {}
-main #login_frm .member_info dd input[name=gender] + label {}
-main #login_frm .member_info dd input[name^=birthday] {}
+main #login_frm .member_info dd #authentication_btn {
+    background-color:#ccc;
+}
+main #login_frm .member_info dd #address_search_btn {
+    border:1px solid #5f0080;
+    background-color:#fff; width:90%; 
+    padding:12px 0; border-radius:4px;
+}
+main #login_frm .member_info dd #address_search_btn + span {
+    display:block; color:#aaa;
+}
+main #login_frm .member_info .gender_g {text-align: center;} 
+main #login_frm .member_info dd input[name=gender] {display:none;}
+main #login_frm .member_info dd input[name=gender] + label {
+    /* 비활성화 디자인 */
+    background-image:url(../imeges/check_state.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 0 2px;
+    padding-left: 30px;
+    margin-right: 20px;
+}
+main #login_frm .member_info dd input[name=gender] + label:last-of-type {
+    margin-right: none;
+}
+main #login_frm .member_info dd input[name=gender]:checked + label { /* 눌러서 변경되는것만 쓰기 */ /* <--radio 
+    checked는 input type이 raid이거나 checkedbox일때 css에서 쓰이는데 체크하는ㄱ의 활성화상태 디자인을 하기위해 쓰이는 속성이다 */
+    /* 활성화 디자인 */
+    background-image:url(../imeges/check_state_on.png);
+}
+main #login_frm .member_info .gender_g ~ dd { /* gender_g 옆 모든 DD 다 잡기 */
+    text-align: center;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) {
+    background: #fff;
+    width: calc(650px * 0.9);
+    border: 1px solid #5f0080;
+    border-radius: 4px;
+    padding: 12px 0;
+} /* 뒤에서 2번째 */
+main #login_frm .member_info dd input[name^=birthday] {
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+/*     border-radius: 4px;
+    padding: 0px 12px; */
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span::after {
+    content:'/';/* 이게 내용 *//* 가상의 태그(주로 a태그에 많이씀 닫기태그가 있어야하는거 고려)-after:뒤로 before:앞*/
+    display:inline-block;
+    font-size: 14px;
+    color: #aaa; margin: 0 3px;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span:nth-child(3)::after {
+    display:none;/* < 뒤에서 2번째 DD 3번째 SPAN 뒤에 있는걸 잡아서 없앤다*/
+}
 /* =========================가입버튼 */
-main #login_frm .btn {}
-main #login_frm .btn #sign_up_btn {}
+main #login_frm .btn {
+    text-align: center;
+}
+main #login_frm .btn #sign_up_btn {
+    background-color: #5f0080; color: #fff;
+    width: 300px; height: 50px;
+    border-radius: 8px;
+    margin: 50px 0 0;
+}
+main #login_frm .btn #sign_up_btn:hover {
+    background-color: #2e003d;
+}
