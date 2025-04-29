@@ -5,7 +5,7 @@
     container 작성하는 메인축 정렬방법*/
     /* flex-wrap: wrap-reverse; *//* container의 item 줄바꿈처리 */
     /*주로 wrap과 nowrap 많이 사용  */
-    flex-flow: column wrap;/* 방향과 줄바꿈 한번에 작성하는 속성 */
+    flex-flow: column wrap;/* 방향과 줄바꿈 한번에 작성하는 속성 디렉션 방향만 flow 줄바꿈까지 */
     justify-content: center;
     /* 양쪽 끝 불일지 말지로 between(붙) or around(떨) 결정함 
     메인축 기준으로 정렬되는 거라 메인축 ->수직(수직정렬) 수평(수평정렬)*/
@@ -16,3 +16,46 @@
 }
 .wrap1 li:nth-child(odd) {background-color: aqua;}
 .wrap1 li:nth-child(even) {background-color: yellow;}
+/* =========4.29 flex 2일차 연습 */
+.wrap2 {background-color: #eee;
+    width:90%; margin: 30px auto 0;padding: 20px; height: 600px;
+    display: flex;
+    flex-flow: row nowrap;/* 방향,줄바꿈 기본값 row , nowrap */
+    /* 교차축 2줄 이상일때 정렬방법(flex-wrap:wrap) 기준 
+    메인축 교체 -> column row 로 변경 */
+/*     align-content:flex-start;} */
+    /* 이건 교차축 기준으로 2줄 이상일때 */
+    align-items: center;
+    /* 교차축 1줄 이상일때 정렬방법 flex-wrap:nowrap  */
+}
+.wrap2 li {/* width: 150px; height: 150px;  */
+    flex: 1;
+    color: #fff; font-size: 5rem;}
+.wrap2 li:nth-child(odd) {background-color: purple;}
+.wrap2 li:nth-child(even){background-color: hotpink;}
+.wrap2 li:nth-child(1) {
+    order: 8;
+}
+.wrap2 li:nth-child(2) {
+    order: 7;
+}
+.wrap2 li:nth-child(3) {
+    order: 6;
+}
+.wrap2 li:nth-child(4) {
+    order: 5;
+}
+.wrap2 li:nth-child(5) {
+    order: 4;
+}
+.wrap2 li:nth-child(6) {
+    order: 2;
+    flex: 2;
+}
+.wrap2 li:nth-child(7) {
+    order: 3;
+    align-self: flex-end;
+}
+.wrap2 li:nth-child(8) {
+    order: 1;
+}
