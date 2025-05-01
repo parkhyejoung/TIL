@@ -1,0 +1,60 @@
+/* 공통 */
+.pst {
+    background-color: #eee;
+    padding: 20px; margin: 20px;
+}
+.pst li {
+    width: 100px;
+    height: 100px;}
+.pst li:nth-child(1) {background-color: yellow;}
+.pst li:nth-child(2) {background-color: greenyellow;}
+.pst li:nth-child(3) {background-color: blue;}
+.pst li:nth-child(4) {background-color: hotpink;}
+/* 개별 */
+.pst1 {position:relative;}/* <-이렇게 해야 absolute 사용 시 부모설정됨 */
+.pst1 li {}
+.pst1 li:nth-child(2) {
+    position:relative; /* 필수속성(현재 위치 기준) 요소가 이동 후에도 원래 위치는 그대로 */
+    right: 20px; top: 20px;/* 한 방향으로만 써야함 순차적으로 적용되는거라 상충되는 값 충돌시 무의미 (이동하고 싶은 방향에 따라지정)*/
+    /* 원래 위치로 갈려면? -> 0으로 맞추기 
+    그래서 애니매이션 css에 많이 쓴다*/
+}
+.pst1 li:nth-child(3) {
+    position: absolute;
+    right: 0; bottom: 0;
+    /* 부모설정 안하면 기본이 body로 설정된다 position 중복 설정 시 가까운 부모 기준으로 걸림*/
+    /* 주로 서브메뉴 설정하는 용도 */
+}
+.pst li:nth-child(4) {position: absolute;
+right: 0; top: 0;}
+.pst1 li span {
+    display: inline-block;
+    border: 5px solid red;
+    padding: 10px;
+    position: absolute; /* 나 자신보다 부모 기준으로 움직일때 쉬우면 이걸꼭쓴다
+    부모를 기준으로 서로연결되어 어디로 이동하고 싶은지 체크 하고 써야함 */
+    right: 0; bottom: 0;
+}
+#all {position: relative;
+    width: 500px;
+    height: 500px;
+    border: 5px solid blue;
+}
+#all #box {position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid red;
+    position: absolute;
+    right: 20px; bottom:0%;
+}
+#all #box .content {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    position:absolute;
+    left: 0; bottom: 0;
+}
+html,body {height: 300vh;}
+.top {
+    position: fixed; /* 무조건 body 기준 위치설정 */
+    right: 50px; bottom: 50px;}
