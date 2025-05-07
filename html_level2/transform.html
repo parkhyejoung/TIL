@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .parant {
+            background-color: #eee; 
+        padding: 30px;
+        }
+        .parant .child {
+            width: 100px; height: 100px;
+            border: 1px solid #000
+        }
+        .parant .child1 {
+            background-color: aqua;
+            transition:background-color 2s; /* hover는 마우스 올려야만 적용되므로
+            자체한테 걸어줘야함 */ 
+        }
+        .parant .child1:hover {
+            background-color: lime;
+/*             transition:애니메이션적용속성 지속시간; */
+        }
+        .parant .child2 {
+            transition: width 0.5s; 
+            height: 1s;
+        }
+        .parant .child2:hover {
+            width: 150px;
+            height: 200px; /* 내가 보고싶은 값 > 원래랑 hover 같은 값 다 해야 확인가능함 */
+        }
+        .parant .child3 {
+            transition:border 0.3s
+        }
+        .parant:hover .child3 { /* 애니메이션 보고 싶은건 자식이므로 여기다 작성 (부모영역 안에 마우스 가져가면다 보임) */
+            border: 5px solid #f00;
+        }
+        .parant .child4 {
+            position: relative; left:0; /* 시작위치(현재위치기준) */
+            transition: left 0.7s/* 앞에 적용될효과 */ ease-out 1s;/* 딜레이 시간차 애니메이션 만들때*/
+            /* linear -> 속도차이 X easr -> 기본값
+            ease-in -> 느리다 빨라짐 ease-out -> 빠르다 늦어짐*/
+            border-radius: 50%;} /* 변하는 값만 쓰기 */
+        .parant:hover .child4 {/* position 애니메이션 사용시 버벅거리지 않게 부모에다가 씀 */
+            left: 300px; /* 방향 통일 */
+        }
+        .parant .child5 {
+            background-color: blue;
+        }
+        .parant:hover .child5 {
+            background-color:red;
+            transition: 2s;
+        }
+        .parant .child6 {
+            width: 400px; height: 600px;
+            background-image: url(https://i.pinimg.com/736x/0f/11/ee/0f11eefab8c54dce2620e08f05ddf7df.jpg);
+            /* 크기 애니메이션 적용시 cover,contain 안됨 꼭 픽셀 퍼센트!*/
+/*             background-position: 0 0;  */
+            background-size: 120%;
+            background-position:center;
+/*             transition:background-position 0.5s; */ */
+            transition:all 1s; /* 한번에 적용 원할시 따로 따로 안적고 all로 통일가능 */
+        }
+        .parant .child6:hover {
+            background-image: url(https://i.pinimg.com/736x/94/51/ac/9451acb020bde8959810ca0e2fd6fc98.jpg);
+            background-position: 100px 0;
+            background-size: 130%;
+        }
+        .parant .child7 {
+            width: 800px; height: 239px;
+            background-image: url(./images/bg.jpg);
+            background-position: 0 0;
+            background-size: cover;
+            background-repeat:repeat-x;
+            transition: all 30s linear; /*  s 숫자 클수록 느리게 적을수록 빠르게 linear 끄면 움직임이 부자연스러울수있음 */
+        }
+        .parant .child7:hover {
+            background-position: -3000px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>transition</h1>
+    <p>기존 CSS 속성이 사용자에 동작에 의해서 변경될 때 애니매이션 효과를 주는 방법</p>
+    <div class="parant">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+        <div class="child child4"></div>
+        <div class="child child5"></div>
+        <div class="child child6"></div>
+        <div class="child child7"></div>
+    </div>
+</body>
+</html>

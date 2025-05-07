@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">  
+    <style>
+        .btn {
+            display: block;
+            border: 1px solid #000;
+            width: 400px; height: 200px;
+        }
+        #btn1 {
+            background:linear-gradient(-90deg ,#eee,rgba(255, 0, 0,0.5)),#ff0;
+            background-size: 400%;
+            transition: all 1s;
+        }
+        #btn1:hover {
+            background-position: 100% 0;
+
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(-90deg, purple , #555 , brown);
+/*             display: inline-block; */
+            width: max-content;
+            transition: all 5s;
+            background-size: 400%;
+            color: transparent;
+            background-clip: text;
+            }
+        h1:hover {background-position-x: 100%;}
+        h2 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(-90deg,rgba(181, 181, 31, 1) 28%, rgba(133, 133, 49, 1) 42%, rgba(13, 13, 4, 1) 57%, rgba(153, 153, 96, 1) 74%, rgba(48, 48, 20, 1) 91%, rgba(237, 221, 83, 1) 100%);
+            width: max-content;
+            color: transparent;  /* <<<<<<< */
+            background-clip: text;
+            background-size: 500%;
+            transition: all 4s;
+        }
+        h2:hover {
+            background-position-x: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover me!</button>
+    <h1>HTML & CSS & Javascript & figma & react
+    </h1>
+    <h2>
+        HTML & CSS & Javascript<br>& figma & react
+    </h2>
+</body>
+</html>
