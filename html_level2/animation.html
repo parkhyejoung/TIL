@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation | keyframes </title>
+    <link ral="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {background: #eee; padding:50px; height: 100vh;}
+        main .target {} /* 공통 */
+        main .ball {
+            background: radial-gradient(at left top,#fff,#222);/* 빛나는 부분 위치 변경 */
+            background-size: 180%;
+/*             background-position: 100%; */ /* 빛나는 부분 위치 변경22 */
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            animation:right500 1s linear 0.5s 3 alternate both; /* animation : 이름 지속시간 진행속도 지연시간 반복횟수 재생방향 종료스타일 위치 잘 기억해서 구분!
+            alternate(홀수일시 순간이동하므로) both 둘이 묶어 쓰면 편함
+            right500 1s 키프레임과 지연시간은 필수요소*/
+        }
+        main .ball2 {
+            background: radial-gradient(at left top,#f0f2ff, #0934c0);
+            background-size: 150%;
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            animation: top400 1s linear 1s 4 alternate both;
+        }
+/*         main .ball3 {
+            animation:zigzag 50s linear infinite alternate;
+        }
+        main .ball3 img {
+            width: 80px;
+            animation: rotate360 40s linear infinite alternate;
+        } */
+        /* html 애니메이션 만들기 */
+        section {}
+        section .ad {height:50vh; padding:50px;}
+        section .ad span {
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 800;
+            animation:ad_txt 0.5s both;
+            display: inline-block;
+        }
+        section .ad span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        section .ad span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        section .ad span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        section .ad span:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+        section .ad2 {}
+        section .ad2 em {
+            font-size: 3rem;
+            font-weight: 800;
+            display: inline-block;
+            animation:ad2 0.1s both;
+        }
+        section .ad2 em:nth-child(1) {
+            animation-delay: 1s;
+        }
+        section .ad2 em:nth-child(2) {
+            animation-delay: 2s;
+        }
+        section .ad2 em:nth-child(3) {
+            animation-delay: 3s;
+        }
+        section .ad2 em:nth-child(4) {
+            animation-delay: 4s;
+        }
+        /* 애니메이션 적용 순서 1.키프레임(애니메이션 장면 생성) 2.애니메이션 호출 */
+        @keyframes ad2 {
+            from{transform: translateY(60px); opacity:0;}
+            to{transform: translateY(0); opacity:1;}
+        }
+        @keyframes ad_txt {
+            from {transform: translateY(50px); opacity:0;}
+            to {transform: translateY(0px); opacity: 1;}
+        }
+        @keyframes rotate360 {
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+        @keyframes zigzag {
+            0% {transform:translate(0,0)}
+            10% {transform:translate(500px,0)}
+            20% {transform:translate(0,500px)}
+            100% {transform:translate(500px,500px)} /* %값 배치에 따라 다른느낌 낼수있음 */
+        }
+        @keyframes right500 {
+            from {transform: translateX(0) rotate(0);}
+            to {transform:translateX(500px) rotate(360deg);}
+        }
+        @keyframes top400 {
+            from {transform: translateY(0) rotate(0);}
+            to {transform: translateY(400px) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="target ball"></div>
+        <div class="target ball2"></div>
+        <div class="target ball3">
+            <img src="../html_level2/images/ball.jpg" alt="">
+        </div>
+    </main>
+    <section>
+        <div class="ad">
+            <span>h</span>
+            <span>t</span>
+            <span>m</span>
+            <span>l</span>
+        </div>
+        <div class="ad2">
+            <em>도</em>
+            <em>담</em>
+            <em>내</em>
+            <em>고양이</em>
+        </div>
+    </section>
+</body>
+</html>
