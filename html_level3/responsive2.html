@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹2 | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {
+/*             max-width: 1920px; 너비 100% 기본값이므로 생략가능*/
+            min-width: 320px; /* <<<<<<<<<<<<전체값 기본셋팅 완료 */
+        }
+        main ul {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 6px;
+        }
+        main ul li {
+            height: 250px;
+            width: calc((100% - 18px)/ 4); /* <<<<<<<<<<<<레이아웃 배열 */
+        }
+        main ul li:nth-child(odd) {background-color: aquamarine;}
+        main ul li:nth-child(even) {background-color: lime;}
+        @media screen and (max-width:1199px) {
+            main {
+/*                 min-width: 720px; 다음값이 719px이라서 이건 생략가능*/
+            }
+            main ul li {
+                width: calc((100% - 12px) / 3); /* <<<<<<<<<<<<레이아웃 배열 */
+            }
+        }/* <<<<<<<<<< tablet 완료*/
+        @media screen and (max-width:719px) {
+            main {
+/*                 min-width: 320px; 맨 위에 최소값 설정했으므로 생략가능*/
+            }
+            main ul li {
+                width: calc((100% - 6px) / 2);  /* <<<<<<<<<<<<레이아웃 배열 */
+            } 
+        } /* <<<<<<<<<< mobile 완료*/
+    </style>
+</head>
+<body>
+    <!-- 공통 여백(gap) 6px -->
+    <!-- 1200~1920 desktop (4열) -->
+    <!-- 720~1199 tablet (3열) -->
+    <!-- 320~719 mobile (2열) -->
+    <main>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </main>
+</body>
+</html>
