@@ -39,21 +39,37 @@
         .menu_contents .menu a {
             margin-right:10px; overflow:hidden; position:relative;
             border-radius:10px; 
+            display: none;
+        }
+        .menu_contents .menu1 a {
+            display: block;
+        }
+        .menu_contents .menu1 a:hover {
+            border-radius: 50%;
+            transition:0.2s linear;
+        }
+        .menu_contents .menu3 {
         }
         .menu_contents .menu a:last-child {margin-right:0}
         .menu_contents .menu a img {width:100%;}
         /* 커피정보 */
         .menu_contents .menu .info {
-            background:rgba(0,102,51,0.8); /*#006633 == rgb(0,102,051)*/
+            background:rgba(0,102,51,0.8);/*#006633 == rgb(0,102,051)*/
             color:#fff;
-            width:100%; height:100%; display:block;
+            width:100%; height:100%;
             position:absolute; left:0; top:0;
             text-align:center;
+            display: none;
         }
         .menu_contents .menu .info span:first-child {padding-top:40%;}
         .menu_contents .menu .info span {
-            display:block; font-weight: 600;
+            display: block;
+            font-weight:600;
             line-height:1.5;
+            color: #fff;
+        }
+        .menu_contents .menu1 a:hover .info {
+            display: block;
         }
         /* active class + animation */
         .active {font-weight:800;}
@@ -106,21 +122,21 @@
                         <span>50kcal</span>
                     </span>
                 </a>
-                <a href="#"><img src="images/menu2-2.jpg" alt=""><span class="info"><span>에스프레소</span><span>80kcal</span></span></a>
-                <a href="#"><img src="images/menu2-3.jpg" alt=""><span class="info"><span>에스프레소</span><span>150kcal</span></span></a>
-                <a href="#"><img src="images/menu2-4.jpg" alt=""><span class="info"><span>에스프레소</span><span>40kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu2-2.jpg" alt=""><span class="info"><span>에스프레소</span><span>80kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu2-3.jpg" alt=""><span class="info"><span>에스프레소</span><span>150kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu2-4.jpg" alt=""><span class="info"><span>에스프레소</span><span>40kcal</span></span></a>
             </div>
             <div class="menu menu3">
-                <a href="#">
+                <a href="#" class="coffee1">
                     <img src="images/menu3-1.jpg" alt="">
                     <span class="info">
                         <span>프라푸치노</span>
                         <span>50kcal</span>
                     </span>
                 </a>
-                <a href="#"><img src="images/menu3-2.jpg" alt=""><span class="info"><span>프라푸치노</span><span>80kcal</span></span></a>
-                <a href="#"><img src="images/menu3-3.jpg" alt=""><span class="info"><span>프라푸치노</span><span>150kcal</span></span></a>
-                <a href="#"><img src="images/menu3-4.jpg" alt=""><span class="info"><span>프라푸치노</span><span>40kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu3-2.jpg" alt=""><span class="info"><span>프라푸치노</span><span>80kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu3-3.jpg" alt=""><span class="info"><span>프라푸치노</span><span>150kcal</span></span></a>
+                <a href="#" class="coffe1"><img src="images/menu3-4.jpg" alt=""><span class="info"><span>프라푸치노</span><span>40kcal</span></span></a>
             </div>
         </div>
     </main>
