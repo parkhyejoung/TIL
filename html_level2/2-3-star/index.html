@@ -35,16 +35,17 @@
         .menu_contents .menu {
             display:flex; justify-content:space-between;
             position:absolute; left:0; top:0;
+            display: none;
         }
         .menu_contents .menu a {
             margin-right:10px; overflow:hidden; position:relative;
-            border-radius:10px; 
-            display: none;
+            border-radius:10px;
+            transition:border-radius 0.5s;
         }
-        .menu_contents .menu1 a {
-            display: block;
+        .menu_contents .menu1 {
+            display: flex;
         }
-        .menu_contents .menu1 a:hover {
+        .menu_contents .menu a:hover {
             border-radius: 50%;
             transition:0.2s linear;
         }
@@ -55,7 +56,6 @@
         /* 커피정보 */
         .menu_contents .menu .info {
             background:rgba(0,102,51,0.8);/*#006633 == rgb(0,102,051)*/
-            color:#fff;
             width:100%; height:100%;
             position:absolute; left:0; top:0;
             text-align:center;
